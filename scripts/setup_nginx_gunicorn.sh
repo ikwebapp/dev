@@ -7,6 +7,9 @@ GUNICORN_SERVICE="/etc/systemd/system/gunicorn.service"
 sudo mkdir -p /etc/ssl/cloudflare
 sudo cp ~/ikweb/conf/origin.* /etc/ssl/cloudflare
 
+sudo mkdir -p /var/www/ikweb
+sudo cp -r ~/ikweb/static /var/www/ikweb/
+
 # Create Nginx configuration
 echo "Creating Nginx configuration..."
 
