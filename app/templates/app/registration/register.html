@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{%block title%}Signup{% endblock %}
+{% load static %}
+{% block main %}
+    <form action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
+        {% for fm in form %}
+        {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+        {% endfor %}
+        <input type="submit" name="Submit">
+    </form>
+    {% if messages %}
+    {% for message in messages %}
+    <small {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}} </small>
+    {% endfor %}
+    {% endif %}
+    {% endblock %}

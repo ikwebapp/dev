@@ -1,0 +1,722 @@
+{% extends 'app/base.html' %}
+{%block title%}Signup{% endblock %}
+{% load static %}
+{% block main %}
+CFD is a physics domain to solve problems related to fluid flows numerically
+
+
+
+
+
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/index.html" class="pull-left">
+        <img class="navbar-logo" src="./Understanding Package Performance_files/carpentrieslab.svg" alt="The Carpentries Lab">
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/index.html">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+
+        
+	
+        <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/setup.html">Setup</a></li>
+
+        
+        
+        <li class="dropdown">
+          <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            
+            <li><iframe src="https://epcced.github.io/2021-01-25_PackagePerformance_Online/00-welcome/index.html" title="Welcome"></iframe></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/01-workflow/index.html">Understanding your HPC workflow</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/02-system-overview/index.html">Overview of ARCHER2 and connecting via SSH</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/021-break/index.html">Break</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/03-benchmarking/index.html">HPC performance and benchmarking</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/031-lunch/index.html">Lunch</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/04-analysis/index.html">Analysing performance</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/05-automation/index.html">Automating performance data collection and analysis</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/051-break/index.html">Break</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/06-profiling/index.html">Introduction to profiling</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/07-next-steps/index.html">Where next?</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/aio/index.html">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+        
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/reference.html">Reference</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/about/index.html">About</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/discuss/index.html">Discussion</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/figures/index.html">Figures</a></li>
+            
+            
+            <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/guide/index.html">Instructor Notes</a></li>
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/LICENSE.html">License</a></li>
+	
+	<li><a href="https://github.com/EPCCed/2021-01-25_PackagePerformance_Online/edit/gh-pages/index.md" data-checker-ignore="">Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+      
+
+
+
+
+
+
+      
+
+
+
+
+
+<h1 class="maintitle"><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/index.html">Understanding Package Performance</a></h1>
+
+
+
+<article>
+  <p>As parallel packages for computational science become more sophisticated, it becomes more difficult
+for a researcher to understand the most important factors that determine end-to-end productivity
+from initial input data to final result. Aspects such as file IO and data transfer can be just as
+important in practice as the performance and parallel scalability of the application itself. This
+course will provide an introduction to understanding your research workflow, the place of HPC
+application performance within the workflow, an introduction to benchmarking parallel applications
+and how you can use benchmark data to make decisions on running your research on HPC systems.</p>
+
+<p>The lesson aims to answer the following questions:</p>
+<ul>
+  <li>How can I understand the end-to-end performance of my research workflow and, particularly, how 
+does my use of HPC fit into this workflow?</li>
+  <li>How do I measure parallel application performance and which metrics should I use and when?</li>
+  <li>What decisions on my use of HPC can I make based on performance measurements?</li>
+</ul>
+
+<h2 id="general">General Information</h2>
+
+<p id="where">
+  <strong>Where:</strong>
+  This course will be taught online via Blackboard Collaborate. All attendees will
+  be sent the joining link prior to the event.
+</p>
+
+<p id="when">
+  <strong>When:</strong>
+  10:00-16:00 GMT, 25 January 2021.
+  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%20Carpentry%20Workshop&amp;dates=20210125/20210125&amp;trp=false&amp;sprop&amp;sprop=name:&amp;sf=true&amp;output=xml&amp;location=&amp;details=%20Carpentry%20Workshop%20at%20Online">Add to your Google Calendar.</a>
+
+</p>
+
+<p id="requirements">
+  <strong>Requirements:</strong> Participants must bring a laptop with a
+  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
+  on. They should have a few specific software packages installed (listed
+  <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/#setup">below</a>). They are also required to abide by the <a href="https://www.archer2.ac.uk/training/code-of-conduct/">ARCHER2 Training Code of Conduct</a>.
+</p>
+
+<p id="accessibility">
+  <strong>Accessibility:</strong> We are committed to making this workshop
+  accessible to everybody.
+</p>
+<p>
+  Materials will be provided in advance of the workshop. If we can help making learning easier for
+  you please get in touch (using contact details below) and we will attempt to provide them.
+</p>
+
+<p id="contact">
+  <strong>Contact</strong>:
+  Please email
+  
+    
+      
+        
+      
+      <a href="mailto:support@archer2.ac.uk">support@archer2.ac.uk</a>
+    
+  
+  for more information.
+</p>
+
+<hr>
+
+<blockquote class="prereq">
+  <h2 id="prerequisites">Prerequisites</h2>
+  <p>You should have used remote HPC facilities before. In particular, you should be happy with connecting
+using SSH, know what a batch scheduling system is and be familiar with using the Linux command line.
+You should also be happy editing plain text files in a remote terminal (or, alternatively, editing them
+on your local system and copying them to the remote HPC system using <code class="language-plaintext highlighter-rouge">scp</code>).</p>
+</blockquote>
+
+<blockquote class="prereq">
+  <h2 id="requirements">Requirements</h2>
+  <p>Participants must bring a laptop with a Mac, Linux, or Windows operating system (not a tablet,
+Chromebook, etc.) that they have administrative privileges on. They should have a few specific software
+packages installed (listed in the Setup section below). They are also required to abide by the
+<a href="https://www.archer2.ac.uk/training/code-of-conduct/">ARCHER2 Training Code of Conduct</a>.</p>
+</blockquote>
+
+<p>Note that this lesson uses <a href="https://carpentries.org/">The Carpentries</a> template but this is not a 
+Carpentries lesson.</p>
+
+<h2 id="collaborative-document-etherpad">Collaborative Document (etherpad)</h2>
+
+<p>Access <a href="https://pad.archer2.ac.uk/p/210125pkgperf">the course etherpad</a></p>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+<div class="syllabus">
+  <h2 id="schedule">Schedule</h2>
+
+  
+  
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+
+  <table class="table table-striped">
+  <tbody><tr>
+    
+    <td class="col-md-2"></td>
+    <td class="col-md-3"><a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/setup.html">Setup</a></td>
+    <td class="col-md-7">Download files required for the lesson</td>
+  </tr>
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">10:00</td>
+      <td class="col-md-3">
+        
+	1. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/00-welcome/index.html">Welcome</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              What can I expect from this course?
+
+              
+              <br>
+              
+            
+              How will the course work and how will I get help?
+
+              
+              <br>
+              
+            
+              How can I give feedback to improve the course?
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">10:15</td>
+      <td class="col-md-3">
+        
+	2. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/01-workflow/index.html">Understanding your HPC workflow</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              What are the components of my HPC research workflow?
+
+              
+              <br>
+              
+            
+              What impact would performance improvements have on the different components?
+
+              
+              <br>
+              
+            
+              How can I understand the dependencies between the different components?
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">11:00</td>
+      <td class="col-md-3">
+        
+	3. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/02-system-overview/index.html">Overview of ARCHER2 and connecting via SSH</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              What hardware and software is available on ARCHER2?
+
+              
+              <br>
+              
+            
+              How does the hardware fit together?
+
+              
+              <br>
+              
+            
+              How do I connect to ARCHER2?
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">11:20</td>
+      <td class="col-md-3">
+        
+	4. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/021-break/index.html">Break</a>
+      </td>
+      <td class="col-md-7">
+        
+          Break
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">11:35</td>
+      <td class="col-md-3">
+        
+	5. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/03-benchmarking/index.html">HPC performance and benchmarking</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              Why should I benchmark my use of HPC?
+
+              
+              <br>
+              
+            
+              What are the key benchmarking concepts that I should understand?
+
+              
+              <br>
+              
+            
+              What is the right performance metric for my HPC use?
+
+              
+              <br>
+              
+            
+              What parameters can affect the performance of my applications?
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">12:30</td>
+      <td class="col-md-3">
+        
+	6. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/031-lunch/index.html">Lunch</a>
+      </td>
+      <td class="col-md-7">
+        
+          Break
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">13:30</td>
+      <td class="col-md-3">
+        
+	7. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/04-analysis/index.html">Analysing performance</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              How do I analyse the results of my benchmarking?
+
+              
+              <br>
+              
+            
+              Which metrics can I use to make decisions about the best way to run my calculations?
+
+              
+              <br>
+              
+            
+              What are the aspects I should consider when making decisions about parallel performance?
+
+              
+              <br>
+              
+            
+              What stops my HPC use from scaling to higher node counts?
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">14:30</td>
+      <td class="col-md-3">
+        
+	8. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/05-automation/index.html">Automating performance data collection and analysis</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              Why is automation useful?
+
+              
+              <br>
+              
+            
+              What considerations should I have when automating collecting performance data?
+
+              
+              <br>
+              
+            
+              Are there any tools that can help with automation?
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">15:10</td>
+      <td class="col-md-3">
+        
+	9. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/051-break/index.html">Break</a>
+      </td>
+      <td class="col-md-7">
+        
+          Break
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">15:25</td>
+      <td class="col-md-3">
+        
+	10. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/06-profiling/index.html">Introduction to profiling</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              How does profiling differ from performance benchmarking?
+
+              
+              <br>
+              
+            
+              WHat information can I get from profiling?
+
+              
+              <br>
+              
+            
+              How can I profile the application I am using?
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">15:50</td>
+      <td class="col-md-3">
+        
+	11. <a href="https://epcced.github.io/2021-01-25_PackagePerformance_Online/07-next-steps/index.html">Where next?</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              What are the next steps for me?
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+  
+  
+  <tr>
+    
+    <td class="col-md-2">16:00</td>
+    <td class="col-md-3">Finish</td>
+    <td class="col-md-7"></td>
+  </tr>
+  </tbody></table>
+
+  <p>
+    The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
+  </p>
+
+</div>
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+{% endblock %}

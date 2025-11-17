@@ -1,0 +1,60 @@
+#!/bin/bash
+
+NGINX_CONF="/etc/nginx/sites-available/ikweb"
+GUNICORN_SERVICE="/etc/systemd/system/gunicorn.service"
+
+# Create Nginx configuration
+echo "Creating Nginx configuration..."
+
+sudo bash -c "cat > $NGINX_CONF" << 'EOF'
+server {
+    listen 80;
+    server_name _;
+
+    location / {
+        proxy_pass http://127.0.0.1:8001;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /static/ {
+        alias /home/webadmin/ikweb/static/;
+    }
+}
+EOF
+
+# Enable Nginx site
+sudo ln -sf "$NGINX_CONF" /etc/nginx/sites-enabled/ikweb
+sudo rm -f /etc/nginx/sites-enabled/default
+
+# Test and reload Nginx
+echo "Testing Nginx..."
+sudo nginx -t && sudo systemctl restart nginx
+
+
+# Create Gunicorn service file
+echo "Creating Gunicorn service..."
+
+sudo bash -c "cat > $GUNICORN_SERVICE" << 'EOF'
+[Unit]
+Description=Gunicorn for Django (ikweb)
+After=network.target
+
+[Service]
+User=webadmin
+Group=www-data
+WorkingDirectory=/home/webadmin/ikweb
+ExecStart=/home/webadmin/ikweb/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:8001 ikweb.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Reload systemd and start Gunicorn
+sudo systemctl daemon-reload
+sudo systemctl enable gunicorn
+sudo systemctl restart gunicorn
+
+echo "Nginx and Gunicorn setup completed successfully!"
+

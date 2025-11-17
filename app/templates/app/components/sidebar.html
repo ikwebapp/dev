@@ -1,0 +1,80 @@
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link " href="{%url 'signup' %}">
+          <i class="bi bi-grid"></i>
+          <span>Enroll Now</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components1-nav" data-bs-toggle="collapse" href="#">
+          <i class="fas fa-university"></i><span>Home</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components1-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>About us</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-accordion.html">
+              <i class="bi bi-circle"></i><span>Contact us</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Home Nav -->
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="fas fa-university"></i><span>Computer Science</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Level-1</span>
+            </a>
+           </li>
+          <li>
+            <a href="#" >
+              <i class="bi bi-circle"></i><span>Level-2</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+      {% if user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Artificial intelligence</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'info' %}">
+              <i class="bi bi-circle"></i><span>Level-1</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'hpc' %}">
+              <i class="bi bi-circle"></i><span>Level-2</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'Performance' %}">
+              <i class="bi bi-circle"></i><span>Level-3</span>
+            </a>
+          </li>     
+          <li>
+            <a href="{% url 'Applications' %}">
+              <i class="bi bi-circle"></i><span>Level-4</span>
+            </a>
+          </li>                
+        </ul>
+      </li><!-- End Tables Nav -->
+      {% endif %}
+
+    </ul>
+
+  </aside>
+  <!-- End Sidebar-->

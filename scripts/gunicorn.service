@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn for Django (ikweb)
+After=network.target
+
+[Service]
+User=webadmin
+Group=www-data
+WorkingDirectory=/home/webadmin/ikweb
+ExecStart=/home/webadmin/ikweb/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:8001 ikweb.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
