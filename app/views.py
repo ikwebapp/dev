@@ -22,6 +22,16 @@ def Applications(request):
 def hpc(request):
     return render(request, 'app/content/Hpc.html')
 
+########################################################
+def igcse_chemistry_9_1(request):
+    return render(request, 'app/content/igcse_chemistry_9_1.html')
+def igcse_mathematics_9_1(request):
+    return render(request, 'app/content/igcse_mathematics_9_1.html')
+def igcse_physics_9_1(request):
+    return render(request, 'app/content/igcse_physics_9_1.html')        
+########################################################
+
+
 def sign_up(request):
     if request.method == "POST":
         fm = signupForm(request.POST)

@@ -29,19 +29,24 @@
       
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="fas fa-university"></i><span>Computer Science</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fas fa-university"></i><span>Academics</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="#">
-              <i class="bi bi-circle"></i><span>Level-1</span>
+            <a href="{% url 'igcse_chemistry_9_1' %}">
+              <i class="bi bi-circle"></i><span>IGCSE-8G-Chemistry</span>
             </a>
            </li>
           <li>
-            <a href="#" >
-              <i class="bi bi-circle"></i><span>Level-2</span>
+            <a href="{% url 'igcse_physics_9_1' %}"" >
+              <i class="bi bi-circle"></i><span>IGCSE-8G-Physics</span>
             </a>
           </li>
+          <li>
+            <a href="{% url 'igcse_mathematics_9_1' %}"" >
+              <i class="bi bi-circle"></i><span>IGCSE-8G-Mathematics</span>
+            </a>
+          </li>          
         </ul>
       </li><!-- End Components Nav -->
       {% if user.is_authenticated %}
@@ -69,7 +74,12 @@
             <a href="{% url 'Applications' %}">
               <i class="bi bi-circle"></i><span>Level-4</span>
             </a>
-          </li>                
+          </li>  
+          <li>
+            <a href="{% url 'query' %}">
+              <i class="bi bi-circle"></i><span>Chat</span>
+            </a>
+          </li>                         
         </ul>
       </li><!-- End Tables Nav -->
       {% endif %}

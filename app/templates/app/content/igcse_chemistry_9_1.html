@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+{%block title%}Chat{% endblock %}
+{% load static %}
+{% block main %}
+    <div class="pagetitle">
+      <h1>Data Tables</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Tables</li>
+          <li class="breadcrumb-item active">Data</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+        <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">IGCSE-8G-Chemistry</h5>
+              <p>EDEXCEL INTERNATIONAL GCSE(9-1) - CHEMISTRY</p>
+
+<iframe
+    src="{% static 'pdfs/new-edexcel-IGCSE-chemistry-answers.pdf' %}#toolbar=0"
+    width="100%"
+    height="600px"
+    style="border: none;"
+></iframe>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+{% endblock %}

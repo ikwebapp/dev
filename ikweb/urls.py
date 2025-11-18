@@ -31,6 +31,8 @@ urlpatterns = [
     path('logout/', views.user_logout, name="logout"),  
     path('changepass/', views.user_changepass, name="changepass"), 
     path('changepass1/', views.user_changepass1, name="changepass1"),
-    path('user_details/<int:id>', views.user_details, name="user_details")
-
+    path('user_details/<int:id>', views.user_details, name="user_details"),
+    path('igcse_chemistry_9_1/', views.igcse_chemistry_9_1, name="igcse_chemistry_9_1" ),
+    path('igcse_mathematics_9_1/', views.igcse_mathematics_9_1, name="igcse_mathematics_9_1" ),
+    path('igcse_physics_9_1/', views.igcse_physics_9_1, name="igcse_physics_9_1" )
 ]
